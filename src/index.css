@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-charcoal font-sans antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  *:focus-visible {
+    @apply outline-none ring-2 ring-accent ring-offset-2 ring-offset-white rounded-sm-2;
+  }
+
+  ::selection {
+    @apply bg-accent text-white;
+  }
+}
+
+@layer components {
+  .container-wide {
+    @apply mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded bg-accent px-6 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-accent-600 disabled:opacity-50;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded border border-navy-600 px-6 py-3 text-sm font-semibold text-navy-600 transition-colors duration-200 hover:bg-navy-600 hover:text-white;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded px-4 py-2 text-sm font-medium text-charcoal transition-colors hover:bg-gray-100;
+  }
+
+  .card-base {
+    @apply rounded border border-gray-100 bg-white transition-shadow duration-300;
+  }
+
+  .input-base {
+    @apply w-full rounded border border-gray-300 bg-white px-4 py-2.5 text-sm text-charcoal placeholder:text-gray-400 transition-colors focus:border-accent focus:ring-1 focus:ring-accent/30;
+  }
+
+  .skeleton {
+    @apply relative overflow-hidden bg-gray-200/70;
+  }
+
+  .skeleton::after {
+    @apply absolute inset-0 -translate-x-full animate-shimmer bg-gradient-to-r from-transparent via-white/60 to-transparent;
+    content: '';
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+  .perspective {
+    perspective: 1200px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
