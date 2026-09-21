@@ -2,7 +2,6 @@ import { useState, useRef, useEffect, useMemo } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Search, ShoppingBag, Heart, User, Globe, Menu, LogOut } from 'lucide-react';
 import Logo from '@/components/Logo';
-import AnalogClock from '@/components/header/AnalogClock';
 import { useShop } from '@/context/ShopContext';
 import { useAuth } from '@/context/AuthContext';
 import { useSearchProducts, useBrands } from '@/hooks/useCatalogue';
@@ -80,10 +79,6 @@ export default function MainHeader({ onOpenMobileNav }: MainHeaderProps) {
         </button>
 
         <Logo className="shrink-0" />
-
-        <div className="hidden sm:flex shrink-0 items-center" title="Myanmar Time">
-          <AnalogClock size={48} />
-        </div>
 
         {/* Search */}
         <div ref={searchRef} className="relative flex-1 max-w-3xl mx-auto hidden md:block">
