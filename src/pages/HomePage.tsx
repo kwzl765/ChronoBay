@@ -1,5 +1,6 @@
 import Seo from '@/components/Seo';
 import HeroCarousel from '@/components/home/HeroCarousel';
+import CountdownSale from '@/components/home/CountdownSale';
 import PromoCards from '@/components/home/PromoCards';
 import ShopByCollection from '@/components/home/ShopByCollection';
 import PopularCollection from '@/components/home/PopularCollection';
@@ -16,6 +17,7 @@ export default function HomePage() {
         description="Shop authentic premium watches from Casio, G-Shock, Seiko and more. Free delivery over 300,000 MMK. Official warranty, nationwide delivery."
       />
       <HeroCarousel />
+      <CountdownSale />
       <PromoCards />
       <ShopByCollection />
       <PopularCollection />
