@@ -16,8 +16,8 @@ export default function Logo({ variant = 'dark', className = '' }: LogoProps) {
       className={`flex items-center gap-2 ${className}`}
       aria-label="ChronoBay home"
     >
-      <span className="flex h-14 w-14 items-center justify-center rounded bg-navy-600">
-        <AnalogClock size={52} />
+      <span className="flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-charcoal to-black ring-1 ring-accent/30">
+        <AnalogClock size={58} />
       </span>
       <span className="flex flex-col leading-none">
         <span className={`text-xl font-extrabold tracking-tight ${textColor}`}>
