@@ -17,6 +17,7 @@ import LoginPage from '@/pages/LoginPage';
 import AboutPage from '@/pages/AboutPage';
 import ContactPage from '@/pages/ContactPage';
 import BlogPage from '@/pages/BlogPage';
+import SeedPage from '@/pages/SeedPage';
 import NotFoundPage from '@/pages/NotFoundPage';
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
               <Route path="/about" element={<AboutPage />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/blog" element={<BlogPage />} />
+              <Route path="/admin/seed" element={<SeedPage />} />
               <Route path="*" element={<NotFoundPage />} />
             </Routes>
           </main>
